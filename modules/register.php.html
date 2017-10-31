@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="Baiduspider" content="nofollow">
+    <meta name="Baiduspider" content="noarchive">
+    <meta name="description" content="【请认准正版官网，谨防上当】BirdVPN是一款安全、稳定、好用的网络优化软件，为专业人士、海外商务提供可靠加速服务，通过加密协议保护网络数据，有效加固个人隐私" />
+    <title>BirdVPN</title>
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../asset/newbaa/css/global-ver=101.css" type="text/css" />
+    <link rel="stylesheet" href="../asset/newbaa/css/outer-ver=104.css" type="text/css" />
+    <link rel="stylesheet" href="../asset/newbaa/css/index-ver=105.css" type="text/css" />
+    <script type="text/javascript" src="../asset/js/jQuery.min.js"></script>
+    <script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../asset/newbaa/js/outer.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/asset/newbaa/js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="/asset/newbaa/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .mailCode{
+            width: 80px;
+            text-align: center;
+        }
+        .mailCode:last-child{
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            border-radius: 0 4px 4px  0;
+            background-color: #3c8dbc;
+        }
+        #mailCode{
+            padding-right: 80px;
+        }
+        
+    </style>
+</head>
+ 
+<body>
+    <div id="wrapper">
+        <div class="root">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header"> 
+						<a href="/" class="navbar-brand"><span style="color: #fff;font-size: 24px;line-height: 30px;">BirdVPN</span></a>
+						<span class="navbar-summary">快速、稳定的网络优化服务</span>
+						<a class="app-dl" target="_blank" href="/shiyong.php.html">下载客户端</a> 
+						<button data-toggle="collapse" data-target=".mobile-nav" class="navbar-toggle collapsed">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div role="navigation" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/">首页</a></li>
+							<li><a href="/shiyong.php.html">下载</a></li>
+							<li><a href="/vip.php.html">购买</a></li>
+							<li><a href="/about-us.php.html">关于</a></li>
+							<li class="signin"><a href="/modules/login.php.html">登录</a></li>
+							<li class="signin"><a href="/modules/register.php.html">注册</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mobile-nav collapse">
+					<ul>
+						<li><a href="/">首页</a></li>
+						<li><a href="/shiyong.php.html">下载</a></li>
+						<li><a href="/vip.php.html">购买</a></li>
+						<li><a href="/about-us.php.html">关于</a></li>
+						<li class="signin"><a href="/modules/login.php.html">登录</a></li>
+						<li class="signin"><a href="/modules/register.php.html">注册</a></li>
+					</ul>
+				</div>
+			</nav>
+            <div class="container width400">
+                <h2>帐号注册</h2>
+                <p>
+                    <label id="emailmsg" for="email">电子邮箱</label>
+                    <input type="text" id="email" name="email" value="" maxlength="100" placeholder="填写常用邮箱" />
+                </p>
+               <!-- <p style="position: relative;">
+                    <label class="mailCode" for="mailCode">验证码</label>
+                    <input type="text" id="mailCode" name="mailCode" value="" maxlength="100" placeholder="验证码" />
+                    <label class="mailCode" id="btn-send-code" for="mailCode">发送</label>
+                </p> -->
+
+				<p style="position: relative;">
+                    <label class="mailCode" for="mailCode">验证码</label>
+                    <input type="text" id="mailCode" name="mailCode" value="" maxlength="100" placeholder="验证码" />
+                    <img id="imageButton"  style="cursor:pointer;"  onclick="ff()" >
+                </p>
+
+                <p>
+                    <label id="pwmsg" for="password">设置密码</label>
+                    <input type="password" id="passwd" name="passwd" value="" placeholder="设置帐号密码" />
+                </p>
+                <p>
+                    <label id="pw2msg" for="password2">重复密码</label>
+                    <input type="password" id="repasswd" name="repasswd" value="" placeholder="重新输入帐号密码" />
+                </p>
+                <p>
+                    <button id="reg" class="button validate" type="submit" name="signup">注册帐号</button>
+                    <button type="submit" name="signup" id="reg2" disabled="disabled" style="display:none" class="button validate">提交中，请稍后...</button>
+                </p>
+                <p class="text-center">已有帐号？<a href="login.php.html" style="color:#68b168;">点击登录</a></p>
+                <p style="padding: 5px 20px 0;"><i class="glyphicon glyphicon-info-sign g-0x"></i>注册有任何问题，请联系客服协助</p>
+
+                <div id="msg-success" class="alert alert-info alert-dismissable" style="display: none;">
+                    <a type="button" class="close" id="ok-close" aria-hidden="true">&times;</a>
+                    <h4><i class="icon fa fa-info"></i> 成功!</h4>
+                    <p id="msg-success-p"></p>
+                </div>
+
+                <div id="msg-error" class="alert alert-warning alert-dismissable" style="display: none;">
+                    <a type="button" class="close" id="error-close" aria-hidden="true">&times;</a>
+                    <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
+                    <p id="msg-error-p"></p>
+                </div>
+            </div>
+
+            <!-- jQuery 2.1.3 -->
+            <script src="../asset/js/jQuery.min.js"></script>
+            <!-- Bootstrap 3.3.2 JS -->
+            <script src="../asset/js/bootstrap.min.js" type="text/javascript"></script>
+            <script>
+                var config = {
+                    host: 'http://m.birdvpn.cn'
+                };
+
+				function uuid() {
+					var s = [];
+					var hexDigits = "0123456789abcdef";
+					for (var i = 0; i < 36; i++) {
+						s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+					}
+					s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
+					s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
+					s[8] = s[13] = s[18] = s[23] = "-";
+				 
+					var uuid = s.join("");
+					return uuid;
+				}
+					
+				var token = uuid();
+
+
+				function ff(){						 
+					$("#imageButton").attr("src", config.host+"/api/v1/tool/imageCode?token="+token+'&d='+Math.random()); 
+				}
+
+                $(document).ready(function () {					
+					$("#imageButton").attr("src", config.host+"/api/v1/tool/imageCode?token="+token+'&d='+Math.random()); 
+
+					function ff(){
+						$("#imageButton").attr("src", config.host+"/api/v1/tool/imageCode?token="+token); 
+					}
+
+					function checkEmail(temp){   	
+						//对电子邮件的验证
+						var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+						if(!myreg.test(temp)){
+						  return false;    
+						}	
+						return true;
+					}
+				 
+					function recover(){
+						$("#reg2").hide();
+						$("#reg").show();
+					}
+                    function register() {
+                        $("#reg").hide();
+                        $("#reg2").show();
+
+                        if ($("#passwd").val() != $("#repasswd").val()) {
+							recover();
+                            alert('密码不一致');
+                            return;
+                        }
+
+						if(!checkEmail($("#email").val())){
+							alert('请输入正确的邮箱格式');
+							recover();
+                            return;
+						}
+
+                        $.ajax({
+                            type: "POST",
+                            url: config.host + "/api/v1/user/001-reg",
+                            dataType: "json",
+                            data: {
+                                loginId: $("#email").val(),
+                                loginPwd: $("#passwd").val(),
+								token:token,
+                                mailCode: $("#mailCode").val(),
+                            },
+                            success: function (data) {
+                                if (data.code === "0") {
+                                    $("#msg-error").hide(10);
+                                    $("#msg-success").show(100);
+                                    $("#msg-success-p").html(data.message);
+                                   
+									window.setTimeout("location.href='"+ config.host+"/open/front/"+$("#email").val()+"'", 500);
+									//window.setTimeout("location.href='/modules/login.php.html'", 2000);
+                                } else {
+                                    $("#msg-error").hide(10);
+                                    $("#msg-error").show(100);
+                                    $("#msg-error-p").html(data.message);
+                                    $("#reg").show();
+                                    $("#reg2").hide();
+                                }
+                            }
+                        });
+                    }
+                    function sendMailCode(){
+                         var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                         if(!myreg.test($("#email").val())){
+                              alert('请输入有效的邮箱地址');
+                              return false;
+                         }
+
+                        $.ajax({
+                            type: "POST",
+                            url: config.host + "/api/v1/tool/sendMail",
+                            dataType: "json",
+                            data: {
+                                mail: $("#email").val()
+                            },
+                            success: function (data) {
+                                if (data.code === "0") {
+                                    $("#msg-error").hide(10);
+                                    $("#msg-success").show(100);
+                                    $("#msg-success-p").html('验证码发送成功');
+                                    setTimeout(function(){
+                                        $("#msg-success").hide(100);
+                                    }, 3000)
+                                } else {
+                                    $("#msg-error").hide(10);
+                                    $("#msg-error").show(100);
+                                    $("#msg-error-p").html(data.message);
+                                    $("#reg").show();
+                                    $("#reg2").hide();
+                                }
+                            }
+                        });
+                    }
+                    $('#btn-send-code').click(function(){
+                        sendMailCode();
+                    })
+                    $("html").keydown(function (event) {
+                        if (event.keyCode == 13) {
+                            register();
+                        }
+                    });
+                    $("#reg").click(function () {
+                        register();
+                    });
+                    $("#ok-close").click(function () {
+                        $("#msg-success").hide(100);
+                    });
+                    $("#error-close").click(function () {
+                        $("#msg-error").hide(100);
+                    });
+                })
+
+            </script>
+        </div>
+    </div>
+   
+    <footer>
+        <div class="footer-link">
+            <ul>
+                <li><a href="tos.php.html">服务条款</a></li>
+                <li><a href="tos.php.html">隐私声明</a></li>
+                <li><a href="../about-us.php.html">联系我们</a></li>
+                <li style="margin-right: 0;"><a href="../about-us.php.html" target="_blank">推广合作</a></li>
+            </ul>
+        </div>
+        <div class="footer-text">Copyright 2017 All Rights Reserved</div>
+        <div class="footer-text" style="margin: 0;">使用BirdVPN产品服务即默认同意香港特別行政區法院具專屬管轄權，以解決任何由本站服务引起的法律事項。</div>
+    </footer>
+    
+</body>
+
+</html>
