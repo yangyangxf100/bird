@@ -178,9 +178,32 @@ $(function(){
         });
     }
 
+    function testAccount(){
+        $.ajax({
+            type: "POST",
+            url: config.host + "/api/v1/user/008-getTestAccount",
+            dataType: "json",
+            success: function (data) {
+                if (data.code === "0") {
+                    var qrcode = new QRCode(document.getElementById("J_qrcode"), {
+                        width : 196,//设置宽高
+                        height : 196
+                    });
+
+                    if(JSON.stringify(data.rows).indexOf('ss')!=-1){
+                        qrcode.makeCode(data.rows);
+                    }                    
+                } else {
+                    alert(data.message);
+                }
+            }
+        });
+    }
+
     if (url.match(/my.html/i) == 'my.html') {
         getEndTime();
         myVpn();
     }
 
+    testAccount();
 })
