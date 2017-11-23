@@ -204,6 +204,5 @@ $(function(){
         getEndTime();
         myVpn();
     }
-
-    testAccount();
+ 
 })
