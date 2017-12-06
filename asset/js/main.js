@@ -169,7 +169,11 @@ $(function(){
                     });
 
                     if(JSON.stringify(data.rows).indexOf('ss')!=-1){
-                        qrcode.makeCode(data.rows);
+                        qrcode.makeCode(data.rows.extend1);
+                        $('#J_ip').text('到期时间：' + data.rows.name);
+                        $('#J_port').text('到期时间：' + data.rows.port);
+                        $('#J_ssUser').text('到期时间：' + data.rows.ssUser);
+                        $('#J_ssPwd').text('到期时间：' + data.rows.ssPwd);                          
                     }                    
                 } else {
                     alert(data.message);
