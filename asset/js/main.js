@@ -171,8 +171,7 @@ $(function(){
                     if(JSON.stringify(data.rows).indexOf('ss')!=-1){
                         qrcode.makeCode(data.rows.extend1);
                         $('#J_ip').text('IP：' + data.rows.name);
-                        $('#J_port').text('端口：' + data.rows.port);
-                        $('#J_ssUser').text('用户：' + data.rows.ssUser);
+                        $('#J_port').text('端口：' + data.rows.port); 
                         $('#J_ssPwd').text('密码：' + data.rows.ssPwd);   
                         $('#J_sec').text('加密方式： aes-256-cfb');                              
                     }                    
@@ -198,8 +197,7 @@ $(function(){
                     if(JSON.stringify(data.rows).indexOf('ss')!=-1){
                         qrcode.makeCode(data.rows.extend1); 
                         $('#J_ip').text('IP：' + data.rows.name);               
-                        $('#J_port').text('端口：' + data.rows.port);
-                        $('#J_ssUser').text('用户：' + data.rows.ssUser);
+                        $('#J_port').text('端口：' + data.rows.port); 
                         $('#J_ssPwd').text('密码：' + data.rows.ssPwd);   
                         $('#J_sec').text('加密方式： aes-256-cfb');   
                     }                    
