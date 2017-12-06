@@ -170,10 +170,11 @@ $(function(){
 
                     if(JSON.stringify(data.rows).indexOf('ss')!=-1){
                         qrcode.makeCode(data.rows.extend1);
-                        $('#J_ip').text('到期时间：' + data.rows.name);
-                        $('#J_port').text('到期时间：' + data.rows.port);
-                        $('#J_ssUser').text('到期时间：' + data.rows.ssUser);
-                        $('#J_ssPwd').text('到期时间：' + data.rows.ssPwd);                          
+                        $('#J_ip').text('IP：' + data.rows.name);
+                        $('#J_port').text('端口：' + data.rows.port);
+                        $('#J_ssUser').text('用户：' + data.rows.ssUser);
+                        $('#J_ssPwd').text('密码：' + data.rows.ssPwd);   
+                        $('#J_sec').text('加密方式： aes-256-cfb');                              
                     }                    
                 } else {
                     alert(data.message);
@@ -195,11 +196,12 @@ $(function(){
                     });
 
                     if(JSON.stringify(data.rows).indexOf('ss')!=-1){
-                        qrcode.makeCode(data.rows.extend1);
-                        $('#J_ip').text('到期时间：' + data.rows.name);
-                        $('#J_port').text('到期时间：' + data.rows.port);
-                        $('#J_ssUser').text('到期时间：' + data.rows.ssUser);
-                        $('#J_ssPwd').text('到期时间：' + data.rows.ssPwd);      
+                        qrcode.makeCode(data.rows.extend1); 
+                        $('#J_ip').text('IP：' + data.rows.name);               
+                        $('#J_port').text('端口：' + data.rows.port);
+                        $('#J_ssUser').text('用户：' + data.rows.ssUser);
+                        $('#J_ssPwd').text('密码：' + data.rows.ssPwd);   
+                        $('#J_sec').text('加密方式： aes-256-cfb');   
                     }                    
                 } else {
                     alert(data.message);
